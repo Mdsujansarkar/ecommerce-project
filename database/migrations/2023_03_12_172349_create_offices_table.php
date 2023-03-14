@@ -29,11 +29,11 @@ return new class extends Migration
             $table->timestamps();
             $table->softDeletes();
         });
-        Schema::create('offices_tag', function(Blueprint $table){
+        Schema::create('offices_tags', function(Blueprint $table){
             $table->foreignId('office_id')->index();
             $table->foreignId('tag_id')->index();
 
-            $table->unique(['tag_id','tag_id']);
+            $table->unique(['office_id','tag_id']);
         });
     }
 
@@ -45,5 +45,6 @@ return new class extends Migration
     public function down()
     {
         Schema::dropIfExists('offices');
+     
     }
 };

@@ -18,6 +18,9 @@ return new class extends Migration
             $table->string('name');
             $table->timestamps();
         });
+        \App\Models\Saif\Tag::create(['name' => 'has_ac']);
+        \App\Models\Saif\Tag::create(['name' => 'has_private_bathroom']);
+        \App\Models\Saif\Tag::create(['name' => 'has_coffie_matchine']);
     }
 
     /**

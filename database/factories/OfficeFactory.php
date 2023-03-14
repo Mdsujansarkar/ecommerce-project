@@ -2,6 +2,7 @@
 
 namespace Database\Factories;
 
+use App\Models\User;
 use Illuminate\Database\Eloquent\Factories\Factory;
 
 /**
@@ -17,7 +18,17 @@ class OfficeFactory extends Factory
     public function definition()
     {
         return [
-            //
+            'user_id' => User::factory(),
+            'title'  => $this->facker->sentence,
+            'description'  => $this->facker->paragraph,
+            'lat'  => $this->facker->latitude,
+            'lng'  => $this->facker->longtude,
+            'address_line1'  => $this->facker->longitude,
+            'address_line2'  => $this->facker->address,
+            'approval_status'  => 2,
+            'hidden'  => false,
+            'price_per_day'  => $this->facker->numberBetween(1000, 2000),
+            'monthly_discount'  => 0,
         ];
     }
 }

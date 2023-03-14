@@ -19,7 +19,7 @@ return new class extends Migration
             $table->foreignId('office_id');
             $table->integer('price');
             $table->tinyInteger('status')->deafult(1);
-            $table->integer('price');
+            $table->integer('price_old');
             $table->date('start_date');
             $table->date('end_date');
             $table->timestamps();
