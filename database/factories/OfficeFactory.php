@@ -2,6 +2,7 @@
 
 namespace Database\Factories;
 
+use App\Models\Saif\Office;
 use App\Models\User;
 use Illuminate\Database\Eloquent\Factories\Factory;
 
@@ -25,7 +26,7 @@ class OfficeFactory extends Factory
             'lng'  => $this->facker->longtude,
             'address_line1'  => $this->facker->longitude,
             'address_line2'  => $this->facker->address,
-            'approval_status'  => 2,
+            'approval_status'  => Office::APPROVAL_APPROVED,
             'hidden'  => false,
             'price_per_day'  => $this->facker->numberBetween(1000, 2000),
             'monthly_discount'  => 0,
